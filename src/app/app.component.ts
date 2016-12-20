@@ -133,5 +133,19 @@ return styles;
       }
     }
 
+   ChangeFabIcom(y){
+    
+if(y < 50000 ){
+return {'fa':true,'fa-smile-o': true,'fa-meh-o': false,'fa-frown-o':false};
+      }else if(y >= 50000 && y < 80000 ){
+return {'fa':true,'fa-smile-o': false,'fa-meh-o': true,'fa-frown-o':false};
+      }else if(y >= 80000){
+return {'fa':true,'fa-smile-o': false,'fa-meh-o': false,'fa-frown-o':true};
+      }
+
+     
+
+   }
+
 
 }

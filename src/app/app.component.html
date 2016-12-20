@@ -3,8 +3,12 @@
     <ul>
       <li>
         <a href="#" class="4rotate">
-            <div class="fab " [ngStyle]="FabStyle(raw_water?.daily)">     </div>
-           <h6 id="mdl" [ngStyle]="setStyle(raw_water?.daily)" >{{raw_water?.name}}</h6>
+          <div class="fab " [ngStyle]="FabStyle(raw_water?.daily)">
+            <div class="FabIcon">
+              <i [ngClass]="ChangeFabIcom(raw_water?.daily)" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h6 id="mdl" [ngStyle]="setStyle(raw_water?.daily)">{{raw_water?.name}}</h6>
           <app-card-water-table [total]="raw_water?.monthly+raw_water?.daily" [monthly]="raw_water?.monthly" [daily]="raw_water?.daily">
           </app-card-water-table>
         </a>
@@ -13,12 +17,16 @@
             <app-card-water> </app-card-water>
           </li>
           <li id="4left">
-                    <a href="#" class="4rotate">
-            <div class="fab " [ngStyle]="FabStyle(MMF_backwash?.daily)">     </div>
-           <h6 id="mdl" [ngStyle]="setStyle(MMF_backwash?.daily)" >{{MMF_backwash?.name}}</h6>
-          <app-card-water-table [total]="MMF_backwash?.monthly+MMF_backwash?.daily" [monthly]="MMF_backwash?.monthly" [daily]="MMF_backwash?.daily">
-          </app-card-water-table>
-        </a>
+            <a href="#" class="4rotate">
+              <div class="fab " [ngStyle]="FabStyle(MMF_backwash?.daily)">
+                <div class="FabIcon">
+                  <i [ngClass]="ChangeFabIcom(MMF_backwash?.daily)" aria-hidden="true"></i>
+                </div>
+              </div>
+              <h6 id="mdl" [ngStyle]="setStyle(MMF_backwash?.daily)">{{MMF_backwash?.name}}</h6>
+              <app-card-water-table [total]="MMF_backwash?.monthly+MMF_backwash?.daily" [monthly]="MMF_backwash?.monthly" [daily]="MMF_backwash?.daily">
+              </app-card-water-table>
+            </a>
             <ul>
               <li>
                 <app-card-water> </app-card-water>
