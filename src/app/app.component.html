@@ -2,7 +2,7 @@
   <div id="main" class="tree">
     <ul>
       <li>
-        <a href="#" class="4rotate">
+        <div class="water_card">
           <div class="fab " [ngStyle]="FabStyle(raw_water?.daily)">
             <div class="FabIcon">
               <i [ngClass]="ChangeFabIcom(raw_water?.daily)" aria-hidden="true"></i>
@@ -11,13 +11,10 @@
           <h6 id="mdl" [ngStyle]="setStyle(raw_water?.daily)">{{raw_water?.name}}</h6>
           <app-card-water-table [total]="raw_water?.monthly+raw_water?.daily" [monthly]="raw_water?.monthly" [daily]="raw_water?.daily">
           </app-card-water-table>
-        </a>
+        </div>
         <ul>
           <li id="left">
-            <app-card-water> </app-card-water>
-          </li>
-          <li id="4left">
-            <a href="#" class="4rotate">
+            <div class="water_card">
               <div class="fab " [ngStyle]="FabStyle(MMF_backwash?.daily)">
                 <div class="FabIcon">
                   <i [ngClass]="ChangeFabIcom(MMF_backwash?.daily)" aria-hidden="true"></i>
@@ -26,7 +23,19 @@
               <h6 id="mdl" [ngStyle]="setStyle(MMF_backwash?.daily)">{{MMF_backwash?.name}}</h6>
               <app-card-water-table [total]="MMF_backwash?.monthly+MMF_backwash?.daily" [monthly]="MMF_backwash?.monthly" [daily]="MMF_backwash?.daily">
               </app-card-water-table>
-            </a>
+            </div>
+          </li>
+          <li id="4left">
+            <div class="water_card">
+              <div class="fab " [ngStyle]="FabStyle(80000)">
+                <div class="FabIcon">
+                  <i [ngClass]="ChangeFabIcom(80000)" aria-hidden="true"></i>
+                </div>
+              </div>
+              <h6 id="mdl" [ngStyle]="setStyle(80000)">Fix Name</h6>
+              <app-card-water-table [total]="350000" [monthly]="150000" [daily]="80000">
+              </app-card-water-table>
+            </div>
             <ul>
               <li>
                 <app-card-water> </app-card-water>
@@ -108,7 +117,16 @@
             </ul>
           </li>
           <li id="right">
-            <app-card-water> </app-card-water>
+            <div class="water_card">
+              <div class="fab " [ngStyle]="FabStyle(49000)">
+                <div class="FabIcon">
+                  <i [ngClass]="ChangeFabIcom(49000)" aria-hidden="true"></i>
+                </div>
+              </div>
+              <h6 id="mdl" [ngStyle]="setStyle(49000)">Fix Name</h6>
+              <app-card-water-table [total]="150000" [monthly]="80000" [daily]="49000">
+              </app-card-water-table>
+            </div>
           </li>
         </ul>
       </li>
