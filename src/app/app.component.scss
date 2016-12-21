@@ -207,3 +207,28 @@ div.FabIcon {
     vertical-align: middle;
     display: inline-block;
 }
+
+app-fab-menu {
+    position: fixed;
+    display: block;
+    right: 1%;
+    bottom: 5%;
+    top: 88%;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+app-fab-menu-scss {
+     position: fixed;
+    display: block;
+    right: -4%;
+    bottom: 5%;
+    top: 88%;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+    // right: -10%;
+    /* bottom: 25%; */
+    // top: 87%;
+}
