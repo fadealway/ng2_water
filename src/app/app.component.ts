@@ -17,14 +17,15 @@ export class data_water  {
   providers: [WaterService]
 })
 export class AppComponent {
-
+  x: any
   ut_daily: any
   ut_monthly: any
   raw_water = new data_water;
   MMF_backwash = new data_water;
   
   constructor(private water: WaterService){
-
+      this.water.get_setting_data().subscribe( w_f =>{ this.x = w_f
+        console.log(this.x['data'][0].value) })
     let timer = TimerObservable.create(100, 5000);
     let x = timer.subscribe(t => {
       this.get_data_all()
@@ -34,6 +35,7 @@ export class AppComponent {
   }
 
     get_data_all():any {
+
       this.water.get_data_daily()
       .subscribe(ut_daily => { 
         // console.log("ut_daily",ut_daily)
